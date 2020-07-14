@@ -23,6 +23,7 @@ class Classy(object):
     def addItem(self,s):
         self.items.append(s)
         return
+        
 
     def classiness(self):
         d = {"tophat":2,"bowtie":4,"monocle":5}
