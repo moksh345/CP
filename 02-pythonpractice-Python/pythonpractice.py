@@ -27,4 +27,4 @@ class Classy(object):
         for i in self.items:
             if (i in d):
                 res = res + d[i]
-            return res
+        return res
