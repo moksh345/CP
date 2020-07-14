@@ -24,10 +24,10 @@ class Classy(object):
         return
 
     def classiness(self):
-        dic = {"tophat":2,"bowtie":4,"monocle":5}
+        d = {"tophat":2,"bowtie":4,"monocle":5}
         res =0
         for i in self.items:
-            if(i in dic):
-                res=res+dic[i]
+            if(i in d):
+                res=res+d[i]
         return res
 
