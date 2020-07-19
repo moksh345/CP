@@ -13,13 +13,14 @@
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	l=[]
-	l.append(a)
-	l.append(b)
-	l.append(c)
-	l = l.sort(reverse=True)
-	print(l)
-	s=' '.join(map(str,l))
+	# l=[]
+	# l.append(a)
+	# l.append(b)
+	# l.append(c)
+	# l = l.sort(reverse=True)
+	# s = ' '.join([str(elem) for elem in l])
+	s = ""
+	max = max(a, b, c)
+	min = min(a, b, c)
+	s+=max+min
 	return(s)
-	
-	# pass
