@@ -15,6 +15,6 @@ def fun_getinrange(x, bound1, bound2):
 	if (min < x < max):
 		return x
 	elif (x < max):
-		return max
-	else:
 		return min
+	else:
+		return max
