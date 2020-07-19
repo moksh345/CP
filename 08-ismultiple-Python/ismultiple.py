@@ -6,4 +6,6 @@
 
 
 def fun_ismultiple(m, n):
+	if (isFactor(m,n)==True):
+		return True
 	return False # replace with your solution
