@@ -8,9 +8,12 @@
 def handtodice(hand):
 	# your code goes here
 	temp = hand
+	l=[]
 	while (temp != 0):
 		t1 = temp % 10
 		temp = temp // 10
-		return t1
+		l.append(t1)
+	l.reverse()
+	return tuple(l)
 
 	# pass
