@@ -43,6 +43,17 @@ def playstep2(hand, dice):
 		else:
 			s = int( str(b) + str(b)+str(n) )
 			return (s, int(dice))
+	elif a != b != c:
+		n = dice % 10
+		dice = dice / 10
+		if n > a:
+			s = str(n) + a
+			n1 = dice % 10
+			dice = dice / 10
+			if n1 > n:
+				s = str(n1 + s)
+				return(int(s),dice)
+			
 			
 	
 	
