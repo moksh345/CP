@@ -30,4 +30,19 @@
 
 def playstep2(hand, dice):
 	# your code goes here
-	pass
+	s = str(hand)
+	a = int(s[0])
+	b = int(s[1])
+	c = int(s[2])
+	if b == c:
+		n = dice % 10
+		dice = dice / 10
+		if n > b:
+			s = int(str(n) + str(b) + str(b))
+			return (s, int(dice))
+		else:
+			s = int( str(b) + str(b)+str(n) )
+			return (s, int(dice))
+			
+	
+	
