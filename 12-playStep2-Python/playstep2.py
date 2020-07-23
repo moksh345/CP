@@ -45,7 +45,7 @@ def playstep2(hand, dice):
 			return (s, int(dice))
 	elif a != b != c:
 		n = dice % 10
-		dice = dice / 10
+		dice = dice // 10
 		if n > a:
 			s = str(n) + str(a)
 			n1 = dice % 10
@@ -53,8 +53,10 @@ def playstep2(hand, dice):
 			if n1 > n:
 				s = str(n1 + s)
 				return (int(s), dice)
+			elif n1 <= a:
+				s=str(s)+str(n1)
 		else:
-			s = str(n) + str(a)
+			s = str(a) + str(n)
 			n1 = dice % 10
 			dice = dice // 10
 			if n1 < n:
