@@ -9,6 +9,6 @@ def islegaltriangle(s1, s2, s3):
 	# your code goes here
 	if (int(s1) < 0 or int(s2) < 0 or int(s3) < 0):
 		return False
-	elif ((s1 + s2 >= s3) or (s1 + s3 >= s2) or (s2 + s3 >= s1)):
+	elif ((s1 + s2 > s3) and (s1 + s3 > s2) and (s2 + s3 > s1)):
 		return True
 	return False
