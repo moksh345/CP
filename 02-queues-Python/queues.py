@@ -5,15 +5,15 @@ few lines as possible.
 Make sure you pass the test cases too!"""
 
 class Queue:
-    def __init__(self, head=None,tail=None,queue=None):
+    def __init__(self, head=None):
         self.storage = [head]
-        self.storage = [tail]
-        queue=[]
+        # self.storage = [tail]
+        # queue=[]
 
     def enqueue(self, new_element):
         # pass
         # new_element.next = self.head
-        queue.append(new_element)
+        self.storage.append(new_element)
 
         
 
@@ -26,4 +26,5 @@ class Queue:
 
     def dequeue(self):
         # pass
-        queue.pop(0)
+        deq=self.storage.pop(0)
+        return deq
