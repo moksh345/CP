@@ -3,7 +3,21 @@
 # values that represent the three points (x1,y1), (x2,y2), and (x3,y3), and returns as a float the
 # area of the triangle formed by those three points. Hint: you should make constructive use of
 # the triangleArea function you just wrote above.
+import math
+
+def trianglearea(s1, s2, s3):
+	# your code goes here
+	s = (s1 + s2 + s3) / 2
+	area=math.sqrt(s*(s-s1)*(s-s2)*(s-s3))
+	return area
+
+def distance(x1, y1, x2, y2):
+	d = math.sqrt((x2 - x1)** 2 + (y2 - y1)** 2)
+	return d
 
 def triangleareabycoordinates(x1, y1, x2, y2, x3, y3):
 	# your code goes here
-	pass
+	s1 = distance(x1, y1, x2, y2)
+	s2 = distance(x2, y2, x3, y3)
+	s3 = distance(x1, y1, x3, y3)
+	return trianglearea(s1,s2,s3)
