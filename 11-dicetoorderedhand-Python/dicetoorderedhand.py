@@ -19,8 +19,11 @@ def dicetoorderedhand(a, b, c):
 	# l.append(c)
 	# l = l.sort(reverse=True)
 	# s = ' '.join([str(elem) for elem in l])
-	s = ""
-	max = max(a, b, c)
-	min = min(a, b, c)
-	s+=max+min
+	# s = ""
+	# maxi = max(a, b, c)
+	# mini = min(a, b, c)
+	# s+=str(maxi)+str(mini)
+	l = [a, b, c]
+	r=(l.remove(max(l)))
+	s=str(max(l))+str(r)+str(min(l))
 	return(s)
