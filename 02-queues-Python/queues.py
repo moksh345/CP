@@ -20,9 +20,10 @@ class Queue:
 
     def peek(self):
         # pass 
-        if not self.empty():
-            return self.head
-        return None
+        # if not self.empty():
+        #     return self.head
+        # return None
+        return self.storage[0]
 
     def dequeue(self):
         # pass
