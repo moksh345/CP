@@ -7,14 +7,14 @@
 import math
 
 def distance(x1, y1, x2, y2):
-	d = sqrt((x2 - x1)** 2 + (y2 - y1)** 2)
+	d = math.sqrt((x2 - x1)** 2 + (y2 - y1)** 2)
 	
 def isrighttriangle(x1, y1, x2, y2, x3, y3):
 	# your code goes here
 	d12 = distance(x1, y1, x2, y2)
 	d23 = distance(x2, y2, x3, y3)
 	d31 = distance(x1, y1, x3, y3)
-	if (math.isclose(d12 ** 2, (d23 ** 2 + d31 ** 2)) or math.isclose(d23 ** 2, (d12 ** 2 + d31 ** 2)) or math.isclose(d31 ** 2, (d23 ** 2 + d12 ** 2))):
+	if (math.isclose((d12 ** 2), (d23 ** 2 + d31 ** 2)) or math.isclose((d23 ** 2), (d12 ** 2 + d31 ** 2)) or math.isclose((d31 ** 2), (d23 ** 2 + d12 ** 2))):
 		return True
 	return False
 
