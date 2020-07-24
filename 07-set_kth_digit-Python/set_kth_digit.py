@@ -26,7 +26,7 @@ def fun_set_kth_digit(n, k, d):
 		s = s.replace(s[k], str(d))
 		# print(s)
 		t = s[::-1]
-		print(t)
+		# print(t)
 		if (n > 0):
 			return int(t)
 		# return
