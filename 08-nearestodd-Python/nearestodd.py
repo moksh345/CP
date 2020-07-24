@@ -6,6 +6,9 @@
 
 
 def fun_nearestodd(n):
+	n = round(n)
+	if (n % 2 != 0):
+		return n
 	return 0
 
 
