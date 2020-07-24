@@ -9,4 +9,10 @@
 
 
 def fun_pascaltrianglevalue(row, col):
-	return 1
+	if (row == col or col == 0 or row == 0):
+		return 1
+	if (col > row):
+		return 0
+	else:
+		return fun_pascaltrianglevalue(row-1,col-1)+fun_pascaltrianglevalue(row-1,col)
+	
