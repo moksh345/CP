@@ -7,7 +7,7 @@
 
 def digitcount(n):
 	# your code goes here
-	count=1
+	count=0
 	if n == 0:
 		return 1
 	elif (abs(n)!=0):
