@@ -37,8 +37,62 @@
 # assert(bonusPlayThreeDiceYahtzee(2633413) == (633, 16))
 # assert(bonusPlayThreeDiceYahtzee(2333413) == (333, 29))
 # assert(bonusPlayThreeDiceYahtzee(2333555) == (555, 35))
-
+def playstep2(hand, dice):
+	# your code goes here
+	s = str(hand)
+	a = int(s[0])
+	b = int(s[1])
+	c = int(s[2])
+	if b == c:
+		n = dice % 10
+		dice = dice / 10
+		if n > b:
+			s = int(str(n) + str(b) + str(b))
+			return (s, int(dice))
+		else:
+			s = int( str(b) + str(b)+str(n) )
+			return (s, int(dice))
+	elif a != b != c:
+		n = dice % 10
+		dice = dice // 10
+		if n > a:
+			s = str(n) + str(a)
+			n1 = dice % 10
+			dice = dice // 10
+			if n1 > n:
+				s = str(n1 + s)
+				return (int(s), dice)
+			elif n1 <= a:
+				s = str(s) + str(n1)
+				return (int(s), dice)
+		else:
+			s = str(a) + str(n)
+			n1 = dice % 10
+			dice = dice // 10
+			if n1 < n:
+				s = str(s)+str(n1) 
+				return (int(s), dice)
+				
+			
 
 def bonusplaythreediceyahtzee(dice):
 	# Your code goes here
-	pass
+	s = str(dice)
+	dice = int(s[:4])
+	hand = int(s[4:])
+	t = playstep2(hand, dice)
+	t1 = playstep2(t[0], t[1])
+	x = t1[0]
+	i = str(x)
+	if (i[0] == i[1] == i[2]):
+		score = 20 + (3 * int(i[0]))
+	elif (i[0] == i[1]):
+		score = 10 + (2 * i[0])
+	elif (i[2] == i[1]):
+		score = 10 + (2 * i[1])
+	elif (i[0] == i[2]):
+		score = 10 + (2 * i[0])
+	else:
+		score = max(int(i[0]), int(i[1]), int(i[2]))
+		
+
