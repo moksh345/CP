@@ -19,6 +19,7 @@ def mostfrequentdigit(n):
 	# maxi = max(d.values())
 	# i = d.values().index(maxi)
 	# return d.items()[i]
+	max=1
 	for d in range(10):
 		count = count(n, d)
 		if (count > max):
