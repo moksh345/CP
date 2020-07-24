@@ -42,17 +42,19 @@ for location in locations.values():
             l = location['USA']
     
 d = {}
-for loc in locations.values():
+for loc in locations:
     if loc == 'Asia':
         d = locations['Asia']
+print(d.keys())
         
 
 def alphaAsia():
     l1 = []
     for i in d:
-        l1.append(str(str(i[0]) + ' - ' + str(i)))
+        l1.append(str(str(d[i][0]) + ' - ' + str(i)))
         print(i)
     return l1
+
 alphaAsia()
     
 #     l1 = []
