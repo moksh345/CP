@@ -18,8 +18,7 @@ def ishappynumber(n):
 	# your code goes here
 	# rem = 0
 	# t=0
-	if (n < 1):
-		return False
+	
 	# else:
 	# 	while (n > 0):
 	# 		rem = n % 10
@@ -28,15 +27,17 @@ def ishappynumber(n):
 	s = str(n)
 	if (n == 1):
 		return True
+	if (len(s)==1 or n < 0):
+		return False
 	else:
 		while (len(s) > 1):
 			t = 0
 			for item in s:
 				t += ((int(item))** 2)
 			s = str(t)
-			if (s =='1'):
-				return True
-			return False
+		if (int(s) ==1):
+			return True
+		return False
 
 
 
