@@ -17,7 +17,7 @@ def fun_fabricyards(inches):
 	t = inches / 36
 	if type(t) == int:
 		return t
-	return ceil(t)
+	return math.ceil(t)
 
 
 def fun_fabricexcess(inches):
