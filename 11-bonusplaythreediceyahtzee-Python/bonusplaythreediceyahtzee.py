@@ -94,5 +94,5 @@ def bonusplaythreediceyahtzee(dice):
 		score = 10 + (2 * i[0])
 	else:
 		score = max(int(i[0]), int(i[1]), int(i[2]))
-		
+	return(t1,score)
 
