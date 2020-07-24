@@ -7,13 +7,13 @@
 
 def fun_nearestodd(n):
 	t = round(n)
-	print(round(16.5))
+	# print(round(16.5))
 	if (t % 2 != 0):
 		return t
 	else:
-		if (t <= n):
-			return t - 1
-		elif (t > n):
+		if (t < n):
+			return t + 1
+		elif (t >= n):
 			return t-1
 
 
