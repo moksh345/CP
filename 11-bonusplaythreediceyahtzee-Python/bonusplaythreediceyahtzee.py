@@ -77,22 +77,44 @@ def playstep2(hand, dice):
 
 def bonusplaythreediceyahtzee(dice):
 	# Your code goes here
+	# s = str(dice)
+	# dice = int(s[:4])
+	# hand = int(s[4:])
+	# t = playstep2(hand, dice)
+	# t1 = playstep2(t[0], t[1])
+	# x = t1[0]
+	# i = str(x)
+	# if (i[0] == i[1] == i[2]):
+	# 	score = 20 + (3 * int(i[0]))
+	# elif (i[0] == i[1]):
+	# 	score = 10 + (2 * i[0])
+	# elif (i[2] == i[1]):
+	# 	score = 10 + (2 * i[1])
+	# elif (i[0] == i[2]):
+	# 	score = 10 + (2 * i[0])
+	# else:
+	# 	score = max(int(i[0]), int(i[1]), int(i[2]))
+	# return(x,score)
 	s = str(dice)
 	dice = int(s[:4])
 	hand = int(s[4:])
-	t = playstep2(hand, dice)
-	t1 = playstep2(t[0], t[1])
-	x = t1[0]
-	i = str(x)
-	if (i[0] == i[1] == i[2]):
-		score = 20 + (3 * int(i[0]))
-	elif (i[0] == i[1]):
-		score = 10 + (2 * i[0])
-	elif (i[2] == i[1]):
-		score = 10 + (2 * i[1])
-	elif (i[0] == i[2]):
-		score = 10 + (2 * i[0])
+	x = playstep2(hand,dice)
+	# print("xx",x)
+	# print(y)
+	a = playstep2(x[0],x[1])
+	# print(a)
+	h = a[0]
+	# print(h)
+	j = str(h)
+	if(j[0] == j[1] == j[2]):
+		score = 20 + (3*int(j[0]))
+	elif(j[0] == j[1]):
+		score = 10 + (2*int(j[0]))
+	elif(j[1] == j[2]):
+		score = 10 + (2*int(j[1]))
+	elif(j[2] == j[0]):
+		score = 10 + (2*int(j[2]))
 	else:
-		score = max(int(i[0]), int(i[1]), int(i[2]))
-	return(t1,score)
+		score = max(int(j[0]) , int(j[1]) , int(j[2]))
+	return (h,score)
 
