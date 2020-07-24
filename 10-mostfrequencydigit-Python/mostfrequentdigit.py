@@ -4,4 +4,9 @@
 
 def mostfrequentdigit(n):
 	# your code goes here
-	pass
+	s = str(n)
+	# counter creates dictionary which will have strings as key and their frequencies as value 
+	d = Counter(s)
+	maxi = max(d.values())
+	i = d.values().index(maxi)
+	return i
