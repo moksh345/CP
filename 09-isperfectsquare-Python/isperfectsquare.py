@@ -5,6 +5,7 @@
 
 def isperfectsquare(n):
 	# your code goes here
-	if (type(n)==int):
-		return True
+	if (type(n) == int):
+		if (n > 0):
+			return True
 	return False
