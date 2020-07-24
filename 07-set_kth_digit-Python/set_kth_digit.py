@@ -35,5 +35,5 @@ def fun_set_kth_digit(n, k, d):
 	
 
 		
-fun_set_kth_digit(-123,3,3)
+fun_set_kth_digit(-468,3,1)
 
