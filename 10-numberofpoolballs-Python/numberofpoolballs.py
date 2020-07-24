@@ -9,4 +9,6 @@
 
 def numberofpoolballs(rows):
 	# Your code goes here
-	pass
+	# The formula states (n(n+1))/(2) or (n^(2)+n)/(2) to get a triangular number for given number of rows.
+	t=((rows**2)+rows)/2
+	return t
