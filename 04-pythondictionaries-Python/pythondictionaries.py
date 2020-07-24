@@ -53,6 +53,7 @@ def alphaAsia():
         l1.append(str(str(i[0]) + ' - ' + str(i)))
         print(i)
     return l1
+alphaAsia()
     
 #     l1 = []
 #     for i in d:
