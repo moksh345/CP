@@ -6,9 +6,14 @@
 
 
 def fun_nearestodd(n):
-	n = round(n)
-	if (n % 2 != 0):
-		return n
-	return 0
+	t = round(n)
+	print(round(16.5))
+	if (t % 2 != 0):
+		return t
+	else:
+		if (t <= n):
+			return t - 1
+		elif (t > n):
+			return t-1
 
 
