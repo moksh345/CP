@@ -9,6 +9,7 @@
 def fun_set_kth_digit(n, k, d):
 	s = str(n)
 	print(s)
+	print(len(s))
 	if (k < len(s)):
 		s=s[::-1]
 		print(s[k])
