@@ -22,6 +22,9 @@ def fun_fabricyards(inches):
 
 def fun_fabricexcess(inches):
 	# your code goes here
-	return 1
+	# return 1
+	t = fun_fabricyards(inches)
+	i = t * 36
+	return(i-inches)
 
 
