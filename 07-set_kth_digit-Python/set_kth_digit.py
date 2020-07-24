@@ -25,12 +25,21 @@ def fun_set_kth_digit(n, k, d):
 		s = s[::-1]
 		print(s)
 		s = s.replace(s[k], str(d))
-		# print(s)
+		print(s)
 		t = s[::-1]
-		# print(t)
+		print(t)
 		if (n > 0):
 			return int(t)
-		# return
+		return 0 - int(t)
+	elif (k == len(s)):
+		s = s[::-1]
+		print(s)
+		s = s.replace(s[k], str(d))
+		print(s)
+		t = s[::-1]
+		print(t)
+		if (n > 0):
+			return int(t)
 		
 	
 
