@@ -31,4 +31,5 @@ def fun_nth_happy_number(n):
 
 
 def fun_nth_happy_prime(n):
+	
 	return 0
