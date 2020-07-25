@@ -37,7 +37,7 @@ class LinkedList(object):
         current = self.head
         if position < 1:
             return None
-        while counter and current <= position:
+        while current and counter <= position:
             if counter == position:
                 return current
             current = current.next
