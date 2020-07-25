@@ -7,6 +7,16 @@
 
 
 
-def fun_interleave(s1,s2):
-	return ""
+def fun_interleave(s1, s2):
+	l1 = len(s1)
+	l2 = len(s2)
+	n = max(l1, l2)
+	s = ""
+	for i in range(n):
+		if i < l1:
+			s += s1[i]
+		if i < l2:
+			s+=s2[i]
+
+	return s
 	
