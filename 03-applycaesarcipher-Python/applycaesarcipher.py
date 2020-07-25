@@ -16,9 +16,9 @@ def fun_applycaesarcipher(msg, shift):
 		if char == " ":
 			s = s + char
 		elif char.isupper():
-			s = s + chr((ord(char + shift - 65)) % 26 + 65)
+			s = s + chr((ord(char) + shift - 65) % 26 + 65)
 		elif char.islower():
-			s = s + chr((ord(char + shift - 97)) % 26 + 97)
+			s = s + chr((ord(char)+ shift - 97) % 26 + 97)
 		else:
 			s=s+char
 
