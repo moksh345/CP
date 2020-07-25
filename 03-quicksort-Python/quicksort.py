@@ -17,5 +17,10 @@ def quicksort(array):
 	# Your code goes here
 	low = 0
 	high = len(array) - 1
+	if low < high:
+		pi = partitn(array, low, high)
+		quicksort(array, low, pi - 1)
+		quicksort(array, pi + 1, high)
+	return array
 	
-	pass
+	# pass
