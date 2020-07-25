@@ -6,14 +6,13 @@
 def median(a):
 	# your code goes here
 	l = len(a)
-	print (l)
-
 	a.sort()
+	index=l//2
 	print (a)
 	if l == 0:
 		return 0
 	elif l % 2 != 0:
-		return 1
+		
+		return (a[index] + a[index - 1]) / 2
+	return a[index]
 	
-	
-	median([1,2,3,4,5])
