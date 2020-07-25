@@ -33,7 +33,7 @@ def isprime(n):
 	for i in range(2, (n // 2) + 1):
 		if n % i == 0:
 			t += 1
-	if k <= 0:
+	if t <= 0:
 		return True
 	return False
 
