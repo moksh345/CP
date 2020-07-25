@@ -14,7 +14,7 @@ class BinaryTree(object):
         False otherwise."""
         # Your code goes here
         # pass
-        if find_val in self.root.value:
+        if find_val in self.root:
             return True
         return False
 
