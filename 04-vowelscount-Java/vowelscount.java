@@ -7,7 +7,15 @@
 class vowelscount {
 	public int fun_vowelscount(String s){
 		// your code goes here
-		return 0;
+		s=s.toLowerCase();
+		int count=0;
+		for(int i=0;i<s.length();i++){
+			char c=s.charAt(i);
+			if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'){
+				count+=1;
+			}
+		}
+		return count;
 	}
 	
 }
