@@ -17,4 +17,10 @@
 
 def matrixadd(L, M):
 	# Your code goes here
-	pass
+	n = []
+	for i in range(len(L)):
+		row = []
+		for j in range(len(M)):
+			row.append(L[i][j] + M[i][j])
+			n.append(row)
+	return n
