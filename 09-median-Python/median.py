@@ -12,7 +12,6 @@ def median(a):
 	if l == 0:
 		return None
 	elif l % 2 != 0:
-		
 		return (a[index] + a[index - 1]) / 2
 	return a[index]
 	
