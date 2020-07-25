@@ -15,21 +15,38 @@ def ishappy(n):
 			return True
 		return False
 
-def fun_nth_happy_number(n):
-	if n==0:
-		return 1
-	elif n == 1:
+# def fun_nth_happy_number(n):
+# 	if n==0:
+# 		return 1
+# 	elif n == 1:
+# 		return 7
+# 	i = 2
+# 	count = 1
+# 	while (count <= n):
+# 		if ishappy(i) == True:
+# 			count += 1
+# 			if count == n:
+# 				return i
+# 		i += 1
+def isprime(n):
+	t = 0
+	for i in range(2, (n // 2) + 1):
+		if n % i == 0:
+			t += 1
+	if k <= 0:
+		return True
+	return False
+
+def fun_nth_happy_prime(n):
+	if n == 0:
 		return 7
-	i = 2
-	count = 1
+	i = 8
+	count = 0
 	while (count <= n):
-		if ishappy(i) == True:
+		if (ishappy(i) == True and isprime(i) == True):
 			count += 1
 			if count == n:
 				return i
 		i += 1
-
-
-def fun_nth_happy_prime(n):
-	
-	return 0
+		
+	# return 0
