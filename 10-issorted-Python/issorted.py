@@ -8,7 +8,7 @@
 def issorted(a):
 	# your code goes here
 	l = len(a)
-	if (all(a[i] < a[i + 1] for i in range(l - 1)) or all(a[i] > a[i + 1] for i in range(l - 1)) ):
+	if (all(a[i] <= a[i + 1] for i in range(l - 1)) or all(a[i] > a[i + 1] for i in range(l - 1)) ):
 		return True
 	return False
 
