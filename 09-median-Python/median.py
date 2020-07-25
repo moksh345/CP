@@ -5,4 +5,14 @@
 
 def median(a):
 	# your code goes here
-	pass
+	l = len(a)
+	print(l)
+
+	a.sort()
+	if l == 0:
+		return 0
+	elif l % 2 != 0:
+		return 1
+	
+	
+	median([1,2,3,4,5])
