@@ -9,6 +9,7 @@ def median(a):
 	print(l)
 
 	a.sort()
+	print(a)
 	if l == 0:
 		return 0
 	elif l % 2 != 0:
