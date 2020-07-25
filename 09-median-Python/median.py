@@ -6,10 +6,10 @@
 def median(a):
 	# your code goes here
 	l = len(a)
-	print(l)
+	print (l)
 
 	a.sort()
-	print(a)
+	print (a)
 	if l == 0:
 		return 0
 	elif l % 2 != 0:
