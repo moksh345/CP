@@ -17,7 +17,7 @@ def ishappy(n):
 	else:
 		while len(s) > 1:
 			t = 0
-			for i in t:
+			for i in s:
 				t += ((int(i))** 2)
 			s = str(t)
 		if int(s) == 1:
