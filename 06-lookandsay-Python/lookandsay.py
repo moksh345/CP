@@ -21,7 +21,7 @@ def lookandsay(a):
 		if i != repeat:
 			result.append((count, int(repeat)))
 			count = 1
-			repeat = item
+			repeat = i
 		else:
 			count += 1
 	return result
