@@ -27,13 +27,13 @@ def ismostlymagicsquare(a):
 		return False
 	
 def freq(l):
-	return mas(set(l),key=l.count)
+	return max(set(l),key=l.count)
 
 def fixmostlymagicsquare(L):
-		k = ismostlymagicsquare(L)
-	# if len(set(k)) == 1:
-	# 	return L
-	# else:
+	k = ismostlymagicsquare(L)
+	if len(set(k)) == 1:
+		return L
+	else:
 		x = freq(k)
 		for item in set(k):
 			if item != x:
