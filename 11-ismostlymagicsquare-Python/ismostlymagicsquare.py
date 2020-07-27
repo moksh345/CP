@@ -20,7 +20,7 @@ def ismostlymagicsquare(a):
 	l = []
 	for i in range(0,len(a)):
 		sum=0
-		for j in range(0, len(arr[0])):
+		for j in range(0, len(a[0])):
 			if i == j:
 				d1 += a[i][j]
 			if i == len(a[0]) - j - 1:
