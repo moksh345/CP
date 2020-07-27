@@ -9,22 +9,20 @@ def ismostlymagicsquare(a):
 	d1 = 0
 	d2 = 0
 	l = []
+	for col in range(len(a)):
+		l.append(sum(row[col]for row in a))
 	for i in range(0,len(a)):
-		sum=0
+		s=0
 		for j in range(0, len(a[0])):
 			if i == j:
 				d1 += a[i][j]
 			if i == len(a[0]) - j - 1:
 				d2 += a[i][j]
-			sum += a[i][j]
-		l.append(sum)
+			s += a[i][j]
+		l.append(s)
 	l.append(d1)
 	l.append(d2)
-	s = set(l)
-	if len(s) == 1:
-		return True
-	else:
-		return False
+	return l
 	
 def freq(l):
 	return max(set(l),key=l.count)
@@ -39,15 +37,16 @@ def fixmostlymagicsquare(L):
 			if item != x:
 				y = item
 		diff = x - y
-		for i in range(len(L[0])):
-			a = L[i][j]
-			L[i][j] += diff
-			t = ismostlymagicsquare(L)
-			if len(set(t)) == 1:
-				b = L
-				break
-			else:
-				l[i][j]=a
+		for i in range(len(L)):
+			for j in range(len(L[0])):
+				a = L[i][j]
+				L[i][j] += diff
+				t = ismostlymagicsquare(L)
+				if len(set(t)) == 1:
+					b = L
+					break
+				else:
+					L[i][j]=a
 		return b
 
 	# pass
