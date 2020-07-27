@@ -10,8 +10,8 @@ def isprime(n):
 	return False
 
 def fun_hasnoprimes(l):
-	for i in l:
-		for j in i:
+	for i in len(l):
+		for j in len(i):
 			if isprime(l[j]):
 				return False
 	return True
