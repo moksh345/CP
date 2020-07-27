@@ -3,8 +3,21 @@
 # the sum of its digits is also prime. For example, 113 is prime and 1+1+3==5 and 5 
 # is also prime, so 113 is an Additive Prime. fun_nth_additive_prime(0) returns 2
 
-
+def isprime(n):
+	if(n == 1):
+		return True
+	i = 1
+	count = 0
+	while(i <= n):
+		if(n%i == 0):
+			count = count + 1
+		i = i + 1
+	if(count == 2):
+		return True
+	else:
+		return False
 
 
 def fun_nth_additive_prime(n):
+
 	return 1
