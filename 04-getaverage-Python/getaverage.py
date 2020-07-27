@@ -9,6 +9,18 @@
 
 
 
-def fun_getaverage(s): 
+def fun_getaverage(s):
+	l = s.split(",")
+	x = ""
+	sum = 0
+	count=0
+	for item in l:
+		if item.isdigit():
+			sum = sum + int(item)
+			count += 1
+	if sum == 0:
+		return float(0)
+	else:
+		return sum/count
 	return 0.0
 
