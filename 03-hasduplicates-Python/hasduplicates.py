@@ -5,4 +5,12 @@
 
 def hasduplicates(L):
 	# Your code goes here
-	pass
+	for i in range(len(L) - 1):
+		for j in range(i + 1, len(L)):
+			for item in L[i]:
+				for t in L[j]:
+					if item == t:
+						return True
+	return False
+
+	# pass
