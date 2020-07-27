@@ -35,5 +35,8 @@ def fun_nth_additive_prime(n):
 	while (count < n):
 		if (isprime(i) and isadditive(i)):
 			count += 1
+			if count == n:
+				break
+			i+=1
 		i+=1		
 	return i
