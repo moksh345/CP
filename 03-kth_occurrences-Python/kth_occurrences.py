@@ -19,7 +19,15 @@ def fun_kth_occurrences(s, n):
 	l.sort(reverse=True)
 	p = list(freq.values())
 	for i in l:
-		t=m[p.index(i)]
-	return 'a'
+		t = m[p.index(i)]
+		x.append(t)
+	count = 0
+	for i in range(len(x)):
+		if (freq[x[i]] > 1):
+			count += 1
+		if count == n:
+			return x[i]
+			break
+	return x[0]
 
 
