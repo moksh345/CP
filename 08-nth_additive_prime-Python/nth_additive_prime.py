@@ -16,8 +16,24 @@ def isprime(n):
 		return True
 	else:
 		return False
+	
+def isadditive(n):
+	s = str(n)
+	sum = 0
+	for i in s:
+		sum += int(i)
+	if (isprime(sum)):
+		return True
+	return False
 
 
 def fun_nth_additive_prime(n):
-
+	if n == 0:
+		return 2
+	i = 3
+	count = 0
+	while (count < n):
+		if (isprime(i) and isadditive(i)):
+			count += 1
+				
 	return 1
