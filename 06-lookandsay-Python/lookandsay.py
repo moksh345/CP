@@ -9,4 +9,20 @@
 
 def lookandsay(a):
 	# Your code goes here
+	b = a
+	b.append(" ")
+	result = []
+	repeat = b[0]
+	b = b[1:]
+	count = 1
+	if len(a) == 0:
+		return result
+	for i in b:
+		if i != repeat:
+			result.append((count, int(repeat)))
+			count = 1
+			repeat = item
+		else:
+			count += 1
+	return result
 	pass
