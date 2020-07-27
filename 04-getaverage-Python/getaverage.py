@@ -22,5 +22,5 @@ def fun_getaverage(s):
 		return float(0)
 	else:
 		return sum/count
-	return 0.0
+	# return 0.0
 
