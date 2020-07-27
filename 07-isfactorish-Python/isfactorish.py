@@ -13,7 +13,7 @@
 
 def fun_isfactorish(n):
 	s = str(abs(n))
-	if ((len(s) > 3) or '0' in s):
+	if ((len(s) !=3) or '0' in s):
 		return False
 	if (len(s) != len(set(s))):
 		return False
