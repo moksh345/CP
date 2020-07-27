@@ -14,6 +14,8 @@ def inverselookandsay(a):
 	if len(a) == 0:
 		return l
 	for i in a:
+		if len(i) == 0:
+			return l
 		for j in range(i[0]):
 			l.append(i[1])
 
