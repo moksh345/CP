@@ -22,5 +22,5 @@ def fun_isfactorish(n):
 			return True
 		return False
 
-	return False
+	
 
