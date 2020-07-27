@@ -45,8 +45,20 @@ public class BST {
     }
 
     private boolean search(Node current, int value) {
-    	// Your code goes here
-    	return false;
+        // Your code goes here
+        boolean x;
+        if(value>current.value){
+            if(current.right==null){
+                return false;
+            }
+            x=search(current.right,value);
+        }else if(value<current.value){
+            if(current.left==null){
+                return false;
+            }
+            x=search(current.left,value);
+        }else{return true;}
+    	return x;
     }
 
 }
