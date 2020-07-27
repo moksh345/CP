@@ -17,9 +17,10 @@ def fun_isfactorish(n):
 		return False
 	if (len(s) != len(set(s))):
 		return False
-	for i in s:
-		if (n % int(i) == 0):
-			return True
+	else:
+		for i in s:
+			if (n % int(i) == 0):
+				return True
 		return False
 
 	
