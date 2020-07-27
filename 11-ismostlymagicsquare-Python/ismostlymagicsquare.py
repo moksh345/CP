@@ -15,4 +15,24 @@
 
 def ismostlymagicsquare(a):
 	# Your code goes here
-	pass
+	d1 = 0
+	d2 = 0
+	l = []
+	for i in range(0,len(a)):
+		sum=0
+		for j in range(0, len(arr[0])):
+			if i == j:
+				d1 += a[i][j]
+			if i == len(a[0]) - j - 1:
+				d2 += a[i][j]
+			sum += a[i][j]
+		l.append(sum)
+	l.append(d1)
+	l.append(d2)
+	s = set(l)
+	if len(s) == 1:
+		return True
+	else:
+		return False
+			
+	# pass
