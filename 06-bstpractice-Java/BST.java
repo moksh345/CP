@@ -17,16 +17,31 @@ public class BST {
     }
 
     public void insert(int value) {
-    	// Your code goes here
+        // Your code goes here
+        Node node=this.root;
+        this.root=insert(node,value);
     }
 
-    private void insert(Node node, int value) {
-    	// Your code goes here
+    private Node insert(Node node, int value) {
+        // Your code goes here
+        if (node==null) return new Node(value);
+        if( value< node.value){
+            node.left=insert(node.left,value);
+        }
+        else if (value>node.value){
+            node.right=insert(node.right,value);
+        }
+        else{
+            node.value=value;
+        }
+        return node;
     }
 
     public boolean search(int value) {
-    	// Your code goes here
-    	return false;
+        // Your code goes here
+        boolean x= search(this.root,value);
+
+    	return x;
     }
 
     private boolean search(Node current, int value) {
